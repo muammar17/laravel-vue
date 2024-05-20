@@ -72,19 +72,21 @@
                                     :paginator="true" 
                                     :rows="10" 
                                     responsiveLayout="scroll" 
-                                    :rowsPerPageOptions="[10,20,50]"
+                                    :rowsPerPageOptions="[5,10,20,50,100]"
+                                    :tableStyle="{ minWidth: '130vw' }"
+                                    removableSort
                                 >
-                                    <Column field="id" header="ID"></Column>
-                                    <Column field="code" header="Code"></Column>
-                                    <Column field="qty" header="Qty"></Column>
-                                    <Column field="qty_unit" header="Qty"></Column>
-                                    <Column field="country_name" header="Country Name"></Column>
-                                    <Column field="item_code" header="Item Code"></Column>
-                                    <Column field="item_desc" header="Item Desc"></Column>
-                                    <Column field="product_type" header="Product Type"></Column>
-                                    <Column field="grade" header="Grade"></Column>
-                                    <Column field="connection" header="Connection"></Column>
-                                    <Column field="size" header="Size"></Column>
+                                    <Column field="id" header="ID" sortable></Column>
+                                    <Column field="code" header="Code" :class="['column-code']" sortable></Column>
+                                    <Column field="qty" header="Qty" sortable></Column>
+                                    <Column field="qty_unit" header="Qty" sortable></Column>
+                                    <Column field="country_name" header="Country Name" sortable></Column>
+                                    <Column field="item_code" header="Item Code" sortable></Column>
+                                    <Column field="item_desc" header="Item Desc" sortable></Column>
+                                    <Column field="product_type" header="Product Type" sortable></Column>
+                                    <Column field="grade" header="Grade" sortable></Column>
+                                    <Column field="connection" header="Connection" sortable></Column>
+                                    <Column field="size" header="Size" sortable></Column>
                                 </DataTable>
                             </div>
                         </div>

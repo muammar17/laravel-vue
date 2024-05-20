@@ -3184,6 +3184,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -56684,54 +56686,83 @@ var render = function () {
                         paginator: true,
                         rows: 10,
                         responsiveLayout: "scroll",
-                        rowsPerPageOptions: [10, 20, 50],
+                        rowsPerPageOptions: [5, 10, 20, 50, 100],
+                        tableStyle: { minWidth: "130vw" },
+                        removableSort: "",
                       },
                     },
                     [
-                      _c("Column", { attrs: { field: "id", header: "ID" } }),
-                      _vm._v(" "),
                       _c("Column", {
-                        attrs: { field: "code", header: "Code" },
+                        attrs: { field: "id", header: "ID", sortable: "" },
                       }),
                       _vm._v(" "),
-                      _c("Column", { attrs: { field: "qty", header: "Qty" } }),
+                      _c("Column", {
+                        class: ["column-code"],
+                        attrs: { field: "code", header: "Code", sortable: "" },
+                      }),
                       _vm._v(" "),
                       _c("Column", {
-                        attrs: { field: "qty_unit", header: "Qty" },
+                        attrs: { field: "qty", header: "Qty", sortable: "" },
+                      }),
+                      _vm._v(" "),
+                      _c("Column", {
+                        attrs: {
+                          field: "qty_unit",
+                          header: "Qty",
+                          sortable: "",
+                        },
                       }),
                       _vm._v(" "),
                       _c("Column", {
                         attrs: {
                           field: "country_name",
                           header: "Country Name",
+                          sortable: "",
                         },
                       }),
                       _vm._v(" "),
                       _c("Column", {
-                        attrs: { field: "item_code", header: "Item Code" },
+                        attrs: {
+                          field: "item_code",
+                          header: "Item Code",
+                          sortable: "",
+                        },
                       }),
                       _vm._v(" "),
                       _c("Column", {
-                        attrs: { field: "item_desc", header: "Item Desc" },
+                        attrs: {
+                          field: "item_desc",
+                          header: "Item Desc",
+                          sortable: "",
+                        },
                       }),
                       _vm._v(" "),
                       _c("Column", {
                         attrs: {
                           field: "product_type",
                           header: "Product Type",
+                          sortable: "",
                         },
                       }),
                       _vm._v(" "),
                       _c("Column", {
-                        attrs: { field: "grade", header: "Grade" },
+                        attrs: {
+                          field: "grade",
+                          header: "Grade",
+                          sortable: "",
+                        },
                       }),
                       _vm._v(" "),
                       _c("Column", {
-                        attrs: { field: "connection", header: "Connection" },
+                        attrs: {
+                          field: "connection",
+                          header: "Connection",
+                          sortable: "",
+                        },
                       }),
                       _vm._v(" "),
                       _c("Column", {
-                        attrs: { field: "size", header: "Size" },
+                        attrs: { field: "size", header: "Size", sortable: "" },
                       }),
                     ],
                     1
